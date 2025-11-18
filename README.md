@@ -1,3 +1,12 @@
+Group 3 members
+1.MEKONNEN DEMSSIE……………………………………………..DTU14R1247
+2. HERMELA AMARE…………………………………………………DTU14R1554
+3. ALEMAYEHU MEKURIA………………………………………….DTU14R1030
+4. MUSE DEBALKE……………………………………………………DTU14R1007
+5. DAWIT GEBREMESKEL……………………………………………DTU13R0456
+6. RAHEL GETACHEW…………………………………………………DTU14R1343
+
+
 # -Diagnosing-Heart-Disease-with-Machine-Learning
 : Decision Trees vs. Random Forests.
 Heart Disease Prediction Using Machine Learning
@@ -5,29 +14,20 @@ Heart Disease Prediction Using Machine Learning
 A complete data mining project using patient medical data to predict the presence of heart disease.
 This project follows a full data-science workflow including data cleaning, EDA, feature engineering, modeling, and evaluation.
 
-📌 Project Objective
+ Project Objective
 
 The primary goal of this project is to build a machine learning model that can accurately predict whether a patient has heart disease based on health-related features such as:
 
 Age
-
 Sex
-
 Resting blood pressure
-
 Cholesterol level
-
 Chest pain type
-
 Maximum heart rate achieved
-
 Exercise-induced angina
-
 And other clinical measurements
-
 This model can assist in early risk detection and support medical decision-making.
-
-📂 Dataset Information
+ Dataset Information
 
 Dataset Name: Heart Disease Dataset
 
@@ -57,7 +57,7 @@ Scikit-learn – Modeling and evaluation
 
 Random Forest Classifier – Final ML model
 
-📊 Project Workflow (Step-by-Step)
+ Project Workflow (Step-by-Step)
 1. Data Loading
 
 Dataset was uploaded to Google Colab and loaded using Pandas.
@@ -151,7 +151,7 @@ Visualization:
 
 Confusion Matrix clearly shows good separation between classes.
 
-📈 Key Insights
+ Key Insights
 
 Chest pain type and maximum heart rate are strong predictors of heart disease.
 
@@ -159,7 +159,7 @@ Random Forest performed very well and provided stable predictions.
 
 The dataset size is small but sufficient for basic ML modeling.
 
-📉 Model Limitations
+ Model Limitations
 
 Small dataset (303 samples)
 
@@ -167,7 +167,7 @@ No hyperparameter tuning applied
 
 Some features may need deeper medical context analysis
 
-🚀 Future Improvements
+ Future Improvements
 
 Implement GridSearchCV or RandomizedSearchCV
 
@@ -178,3 +178,6 @@ Add ROC/AUC Curve visualization
 Deploy the model using Flask or Streamlit
 
 Expand the dataset for more generalizable performance
+
+
+
