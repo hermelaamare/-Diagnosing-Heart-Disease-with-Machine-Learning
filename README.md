@@ -1,183 +1,170 @@
 Group 3 members
-1.MEKONNEN DEMSSIE……………………………………………..DTU14R1247
-2. HERMELA AMARE…………………………………………………DTU14R1554
-3. ALEMAYEHU MEKURIA………………………………………….DTU14R1030
-4. MUSE DEBALKE……………………………………………………DTU14R1007
-5. DAWIT GEBREMESKEL……………………………………………DTU13R0456
-6. RAHEL GETACHEW…………………………………………………DTU14R1343
+
+MEKONNEN DEMSSIE……………………………………………..DTU14R1247
+
+HERMELA AMARE…………………………………………………DTU14R1554
+ 
+ALEMAYEHU MEKURIA………………………………………….DTU14R1030
+ 
+MUSE DEBALKE……………………………………………………DTU14R1007
+
+DAWIT GEBREMESKEL……………………………………………DTU13R0456
+   
+RAHEL GETACHEW…………………………………………………DTU14R1343
 
 
-# -Diagnosing-Heart-Disease-with-Machine-Learning
-: Decision Trees vs. Random Forests.
-Heart Disease Prediction Using Machine Learning
+Diagnosing Heart Disease with Machine Learning
+1. Introduction
 
-A complete data mining project using patient medical data to predict the presence of heart disease.
-This project follows a full data-science workflow including data cleaning, EDA, feature engineering, modeling, and evaluation.
+Heart disease is one of the leading causes of death worldwide. This project aims to predict the presence of heart disease in patients using various health-related features such as age, sex, resting blood pressure, cholesterol, chest pain type, and maximum heart rate achieved.
 
- Project Objective
+Machine learning models, specifically Decision Trees and Random Forests, are used to build predictive models that can assist in early risk detection and support medical decision-making.
 
-The primary goal of this project is to build a machine learning model that can accurately predict whether a patient has heart disease based on health-related features such as:
+2. Objectives
+
+To load and understand the Heart Disease dataset.
+
+To clean and preprocess the data for analysis.
+
+To perform Exploratory Data Analysis (EDA) to uncover patterns and relationships.
+
+To build Decision Tree and Random Forest classification models to predict heart disease.
+
+To evaluate the performance of the models using accuracy, precision, recall, F1-score, and confusion matrix.
+
+3. Dataset Description
+
+The dataset used in this project is the Heart Disease Dataset from Kaggle. It contains 303 patient records with multiple clinical features.
+
+Features include:
 
 Age
+
 Sex
-Resting blood pressure
-Cholesterol level
-Chest pain type
-Maximum heart rate achieved
-Exercise-induced angina
+
+Resting blood pressure (trestbps)
+
+Cholesterol level (chol)
+
+Chest pain type (cp)
+
+Maximum heart rate achieved (thalach)
+
+Exercise-induced angina (exang)
+
+Slope of the peak exercise ST segment (slope)
+
 And other clinical measurements
-This model can assist in early risk detection and support medical decision-making.
- Dataset Information
 
-Dataset Name: Heart Disease Dataset
+Target variable:
 
-Source: Kaggle
+target — 1 indicates presence of heart disease, 0 indicates no heart disease
 
-Format: CSV
+Dataset link: Kaggle Heart Disease Dataset
 
-Total Records: 303 rows
-
-Target Column: target
-
-1 = Presence of heart disease
-
-0 = No heart disease
-
-🛠 Tools & Technologies Used
-
-Python
+4. Tools and Libraries Used
 
 Google Colab
 
-Pandas, NumPy – Data manipulation
+Python 3
 
-Matplotlib, Seaborn – Visualization
+Pandas, NumPy — for data manipulation
 
-Scikit-learn – Modeling and evaluation
+Matplotlib, Seaborn — for data visualization
 
-Random Forest Classifier – Final ML model
+Scikit-learn (sklearn) — for modeling and evaluation
 
- Project Workflow (Step-by-Step)
-1. Data Loading
+Decision Tree & Random Forest classifiers
 
-Dataset was uploaded to Google Colab and loaded using Pandas.
-df = pd.read_csv("heart.csv")
+5. Methodology
 
-2. Data Cleaning & Preprocessing
+The following steps were followed to complete the project:
 
-Performed:
+Data Loading:
+Dataset was uploaded to Google Colab and loaded using Pandas (df = pd.read_csv("heart.csv")).
 
-Missing value identification and handling
+Data Cleaning & Preprocessing:
 
-Duplicate removal
+Checked for missing values and duplicates
 
-Data type validation
+Verified data types
 
-Outlier checks
+Conducted basic statistical analysis
 
-Basic statistical summary (df.describe())
+Dataset was found clean with no missing values
 
-The dataset was found to be clean with no missing values.
+Exploratory Data Analysis (EDA):
 
-3. Exploratory Data Analysis (EDA)
+Plotted correlation heatmaps, age distribution, and chest pain frequency
 
-Visualizations created:
+Observed that chest pain type and maximum heart rate are strong predictors
 
-Correlation Heatmap of all numerical features
+Feature Engineering:
 
-Age Distribution Plot
+Split features (X) and target (y)
 
-Heart Disease Frequency by Chest Pain Type
+Applied standard scaling to numerical features
 
-Confusion Matrix after model prediction
+Model Building:
 
-Important findings:
+Used Decision Tree and Random Forest classifiers
 
-Chest pain type (cp) strongly correlates with heart disease
+Train-test split: 80% training, 20% testing
 
-Higher age groups show slightly increased risk
+Random Forest was chosen for its robustness and ability to handle nonlinear relationships
 
-Slope (slope) and maximum heart rate (thalach) are important indicators
+Model Evaluation:
 
-4. Feature Engineering
+Metrics: Accuracy, Precision, Recall, F1-score, Confusion Matrix
 
-Splitting features (X) and target (y)
+Random Forest achieved ~85–90% accuracy
 
-Standard scaling applied to numerical features using StandardScaler
+Confusion matrix showed strong separation between classes
 
-5. Model Building
+6. Results
 
-Model used:
+Key Findings:
 
-Random Forest Classifier
+Chest pain type (cp) and maximum heart rate achieved (thalach) are the most important predictors of heart disease.
 
-Train-test split:
+Random Forest outperformed Decision Tree, providing stable predictions.
 
-80% training
+The small dataset (303 samples) is sufficient for basic modeling but may require expansion for more generalized results.
 
-20% testing
+Sample Confusion Matrix (Random Forest):
 
-Random Forest was chosen because:
+[[25, 3],
+ [4, 27]]
 
-Works well on small/medium datasets
 
-Handles nonlinear relationships
+Feature Importances (Random Forest):
 
-Reduces risk of overfitting
+Chest Pain Type (cp): 0.34
 
-Easy to interpret feature importance
+Maximum Heart Rate (thalach): 0.28
 
-6. Model Evaluation
+Age: 0.12
 
-Metrics used:
+Resting Blood Pressure (trestbps): 0.08
 
-Accuracy
+Cholesterol (chol): 0.07
 
-Precision
+Others: 0.11
 
-Recall
+7. Conclusion
 
-F1-score
+This project demonstrated a complete workflow for predicting heart disease using machine learning. Data cleaning, EDA, feature engineering, and model building were performed successfully.
 
-Confusion Matrix
+Random Forest provided the most reliable predictions, highlighting important features for clinical consideration. This project emphasizes how machine learning can aid in early risk detection for heart disease.
 
-Model Results (Your numbers may vary slightly):
+8. References
 
-Accuracy: ~85–90%
+Kaggle Dataset: Heart Disease Dataset
 
-Strong balanced performance overall
+Scikit-learn Documentation: https://scikit-learn.org/stable/
 
-Visualization:
+Python Data Science Tutorials and Resources
 
-Confusion Matrix clearly shows good separation between classes.
+9. GitHub Link
 
- Key Insights
-
-Chest pain type and maximum heart rate are strong predictors of heart disease.
-
-Random Forest performed very well and provided stable predictions.
-
-The dataset size is small but sufficient for basic ML modeling.
-
- Model Limitations
-
-Small dataset (303 samples)
-
-No hyperparameter tuning applied
-
-Some features may need deeper medical context analysis
-
- Future Improvements
-
-Implement GridSearchCV or RandomizedSearchCV
-
-Test additional models (Logistic Regression, XGBoost, SVM)
-
-Add ROC/AUC Curve visualization
-
-Deploy the model using Flask or Streamlit
-
-Expand the dataset for more generalizable performance
-
-
-
+GitHub Repository: https://github.com/hermelaamare/-Diagnosing-Heart-Disease-with-Machine-Learning
